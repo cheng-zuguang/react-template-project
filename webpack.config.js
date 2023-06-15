@@ -6,6 +6,7 @@ const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const devServer = require('./webpack/devServer');
 const rules = require('./webpack/rules');
@@ -56,7 +57,8 @@ module.exports = (env, argv) => {
         ]
       }),
       new CssMinimizerWebpackPlugin(),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
+      new TsconfigPathsPlugin({ configFile: 'tsconfig.json' })
     ]
   };
 };

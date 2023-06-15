@@ -17,7 +17,11 @@
     "sourceMap": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "outDir": "."
+    "outDir": ".",
+    "paths": {
+      "@src": ["src"],
+      "@src/*": ["src/*"]
+    }
   },
   "include": ["./src"],
   "exclude": ["node_modules", "dist"]

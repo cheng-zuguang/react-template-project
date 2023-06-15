@@ -1,31 +1,27 @@
 import React from 'react';
-import { RouteObject, useRoutes } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+
+import { ConfigProvider, DatePicker, Button } from 'antd';
+// import dayjs from 'dayjs';
+// import 'dayjs/locale/zh-cn';
+// import zhCN from 'antd/locale/zh_CN';
+// import 'antd/dist/reset.css';
 
 import './App.scss';
 
-const Home = () => {
-  return <div>欢迎来到首页</div>
-}
-
-const NotFound404 = () => {
-  return <div>页面丢失了</div>
-}
-
-const routes: RouteObject[] = [
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: "*",
-    element: <NotFound404 />,
-  },
-];
+// dayjs.locale('zh-cn');
 
 const AppComponent: React.FC = () => {
-  // return <div>大招给忽悠</div>;
+  return (
+      <div>
+        {/* <Link to={`playground`}>TO PlayGround</Link> */}
+        {/* <DatePicker /> */}
+        <Button>123</Button>
 
-  return useRoutes(routes);
+        
+        <Outlet />
+      </div>
+  )
 };
 
 export default AppComponent;

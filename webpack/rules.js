@@ -45,6 +45,9 @@ module.exports = [
     type: 'javascript/auto',
     resolve: {
       fullySpecified: false
+    },
+    use: {
+      loader: "swc-loader"
     }
   },
   {
@@ -92,7 +95,7 @@ module.exports = [
         }
       }
     ]
-  }
+  },
   // {
   //   test: /\.less$/,
   //   use: [
