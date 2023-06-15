@@ -1,16 +1,5 @@
 # React-Template
 
-## Template project by means of react18, typescript ,scss ,pnpm and webpack5.
-
-## Getting started
-- If you don't have a pnpm, you need `npm i pnpm -g` first.
-- Then `pnpm i`.
-- Last `pnpm start`.
-- the port list
-
-
-# React-Template
-
 ## Features
 
 - React 18
@@ -54,4 +43,3 @@ Depending on your needs, you might want to do more optimization to the productio
 
 - the server listening in 4500
 - You can access it by entering localhost:4500
-- 
