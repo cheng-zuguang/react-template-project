@@ -10,20 +10,5 @@ module.exports = {
     'Access-Control-Allow-Origin': '*'
   },
   proxy: {
-    '/do': {
-      target: 'https://qiuer.org/',
-      changeOrigin: true,
-      secure: false
-    },
-    '/*.do': {
-      target: 'https://qiuer.org/',
-      changeOrigin: true,
-      secure: false
-    },
-    '/cdn': {
-      target: 'https://qiuer.org/',
-      changeOrigin: true,
-      secure: false
-    }
   }
 };
