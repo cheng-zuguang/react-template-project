@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import App from '../App';
 import NotFound404 from '../404Page';
+import JSONSchema from '../JSONSchema';
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFound404 />,
     children: [
+      {
+        path: 'formily',
+        element: <JSONSchema />
+      }
     ]
   },
   {

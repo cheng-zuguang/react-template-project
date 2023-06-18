@@ -96,28 +96,28 @@ module.exports = [
       }
     ]
   },
-  // {
-  //   test: /\.less$/,
-  //   use: [
-  //     isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-  //     {
-  //       loader: 'css-loader',
-  //       options: { ...cssLoaderOptions, importLoaders: 2 }
-  //     },
-  //     commonPostcssLoader,
-  //     {
-  //       loader: 'less-loader',
-  //       options: {
-  //         lessOptions: {
-  //           strictMath: true,
-  //           javascriptEnabled: true,
-  //           module: true,
-  //           modifyVars: {
-  //             '@use-css-vars': 1
-  //           }
-  //         }
-  //       }
-  //     }
-  //   ]
-  // }
+  {
+    test: /\.less$/,
+    use: [
+      isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+      {
+        loader: 'css-loader',
+        options: { ...cssLoaderOptions, importLoaders: 2 }
+      },
+      commonPostcssLoader,
+      {
+        loader: 'less-loader',
+        options: {
+          lessOptions: {
+            strictMath: false,
+            javascriptEnabled: true,
+            module: true,
+            modifyVars: {
+              '@use-css-vars': 1
+            }
+          }
+        }
+      }
+    ]
+  }
 ];
