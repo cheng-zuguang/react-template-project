@@ -31,14 +31,18 @@ module.exports = [
       }
     ]
   },
+  // {
+  //   test: /\.(gif|png|jpeg|svg)$/,
+  //   use: {
+  //     loader: 'file-loader',
+  //     options: {
+  //       name: 'img/[name]_[hash:6].[ext]'
+  //     }
+  //   }
+  // },
   {
-    test: /\.(gif|png|jpeg|svg)$/,
-    use: {
-      loader: 'file-loader',
-      options: {
-        name: 'img/[name]_[hash:6].[ext]'
-      }
-    }
+    test: /\.(png|svg|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
   },
   {
     test: /\.m?js$/,
@@ -91,7 +95,6 @@ module.exports = [
         options: {
           implementation: require('sass'),
           sourceMap: isDevelopment,
-          
         }
       }
     ]
