@@ -25,21 +25,8 @@ const cssLoaderOptions = {
 module.exports = [
   {
     test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-    use: [
-      {
-        loader: 'file-loader?name=assets/[name].[ext]'
-      }
-    ]
+    type: 'asset/resource',
   },
-  // {
-  //   test: /\.(gif|png|jpeg|svg)$/,
-  //   use: {
-  //     loader: 'file-loader',
-  //     options: {
-  //       name: 'img/[name]_[hash:6].[ext]'
-  //     }
-  //   }
-  // },
   {
     test: /\.(png|svg|jpg|jpeg|gif)$/i,
     type: 'asset/resource',
